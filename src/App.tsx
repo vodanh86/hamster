@@ -1,7 +1,7 @@
 import './App.css';
 import WebApp from '@twa-dev/sdk'
 import { useState } from 'react'
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Layout from './routes/Layout';
 import Home from './routes/Home';
 import About from './routes/About';
@@ -9,11 +9,12 @@ import Connect from './routes/Connect';
 import NoMatch from './routes/NoMatch';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count] = useState(0)
 
   return (
     <div className='App'>
       <h1>Hamster Kombat</h1>
+      <h3> Xin chào {WebApp.initDataUnsafe.user?.first_name }</h3>
 
         <p>
           This example demonstrates some of the core features of React Router
