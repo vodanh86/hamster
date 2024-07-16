@@ -1,5 +1,6 @@
 import './App.css';
-import '@twa-dev/sdk';
+import WebApp from '@twa-dev/sdk'
+import { useState } from 'react'
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Layout from './routes/Layout';
 import Home from './routes/Home';
@@ -8,6 +9,7 @@ import Connect from './routes/Connect';
 import NoMatch from './routes/NoMatch';
 
 function App() {
+  const [count, setCount] = useState(0)
 
   return (
     <div className='App'>
@@ -19,6 +21,11 @@ function App() {
           <code>&lt;Outlet&gt;</code>s, <code>&lt;Link&gt;</code>s, and using a
           "*" route (aka "splat route") to render a "not found" page when someone
           visits an unrecognized URL.
+          <div className="card">
+          <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
+              Show Alert
+          </button>
+        </div>
         </p>
 
         {/* Routes nest inside one another. Nested route paths build upon
