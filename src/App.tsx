@@ -7,9 +7,13 @@ import Home from './routes/Home';
 import About from './routes/About';
 import Connect from './routes/Connect';
 import NoMatch from './routes/NoMatch';
+import { useTranslation} from 'react-i18next';
 import { fetchDataFromApi } from './hooks/callBackend';
+import i18n from './i18n';
 
 function App() {
+  const { t } = useTranslation();
+  i18n.changeLanguage(WebApp.initDataUnsafe.user?.language_code);
   const [count] = useState(0);
   useEffect(() => {
     apiTesting();
@@ -23,6 +27,7 @@ function App() {
   return (
     <div className='App'>
       <h1>Hamster Kombat</h1>
+      <p>{t('title')}</p>
       <h3> Xin chào {WebApp.initDataUnsafe.user?.first_name}</h3>
 
       <p>
