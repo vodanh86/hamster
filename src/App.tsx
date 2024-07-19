@@ -26,16 +26,11 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Hamster Kombat</h1>
-      <p>{t('title')}</p>
-      <h3> Xin chào {WebApp.initDataUnsafe.user?.first_name}</h3>
+      <h1>{t('home.title')} Hamster Kombat</h1>
+      <h3> {t('home.hello')} {WebApp.initDataUnsafe.user?.first_name}</h3>
 
       <p>
-        This example demonstrates some of the core features of React Router
-        including nested <code>&lt;Route&gt;</code>s,{" "}
-        <code>&lt;Outlet&gt;</code>s, <code>&lt;Link&gt;</code>s, and using a
-        "*" route (aka "splat route") to render a "not found" page when someone
-        visits an unrecognized URL.
+        {t('home.description')}
         <div className="card">
           <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
             Show Alert
