@@ -11,7 +11,7 @@ export default function Layout() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/membership">Membership</Link>
             </li>
             <li>
               <Link to="/connect">Connect</Link>

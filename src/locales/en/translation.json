@@ -1,5 +1,7 @@
 {
   "home.title": "Game",
   "home.hello": "Hello",
-  "home.description": "Welcome to game Hamster Kombat"
+  "home.description": "Welcome to game Hamster Kombat",
+
+  "membership.title": "Membership"
 }
